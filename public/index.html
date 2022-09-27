@@ -1,0 +1,408 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment8</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Mea+Culpa&family=Monoton&family=Montserrat:ital,wght@1,900&family=Orbitron&family=Play&family=Poppins:wght@200;300;400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#f2f2f2]">
+
+    <!-- Navigation Bar -->
+    <header>
+      <!-- Desktop View -->
+      <div class="w-full flex items-center justify-around fixed lol" id="header">
+        <div class="flex items-center m-3">
+          <img src="./materials/octagon.png" class="h-12 w-12 lg:h-16 lg:w-16" alt="octagon" />
+          <span class="font-orbitron text-md lg:text-xl text-[#000000]">AirCon</span>
+        </div>
+        <div class="hidden lg:block">
+          <ul class="flex">
+            <li class="mr-10 text-lg font-quicksand relative">
+              <a href="#home">Home</a>
+            </li>
+            <li class="mr-10 text-lg font-quicksand relative">
+              <a href="#about">About</a>
+            </li>
+            <li class="mr-10 text-lg font-quicksand relative">
+              <a href="#service">Service</a>
+            </li>
+            <li class="mr-10 text-lg font-quicksand relative">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center">
+          <div class="relative">
+            <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer mr-2" src="./materials/MRI.png" alt="User dropdown">
+            <span class="bottom-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+          </div>
+          <div class="w-40 font-medium dark:text-[#000]">
+              <div class="font-orbitron text-sm lg:text-lg">Muhammad Rifqy</div>
+              <div class="font-play text-xs lg:text-md text-[#666666] dark:text-[#666666] truncate">Just a Weirdo That You Eventually Meet</div>
+          </div>
+          <div id="userDropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom-start" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 410px, 0px);">
+            <div class="py-3 px-4 text-sm text-gray-900 dark:text-white">
+              <div class="font-quicksand">Muhammad Rifqy</div>
+              <div class="font-quicksand font-medium truncate">2ndrifqy@gmail.com</div>
+            </div>
+            <ul class="font-quicksand py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+              <li>
+                <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-[#000006]">Dashboard</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-[#000006]">Settings</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-[#000006]">Help</a>
+              </li>
+            </ul>
+            <div class="font-quicksand font-black py-1">
+              <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-[#000006]">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile View -->
+      <div class="mobile-bottom-navigation lg:hidden lol">
+        <button class="mobile-btn">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+        <a href="#home" class="mobile-btn">
+          <ion-icon name="home-outline"></ion-icon>
+        </a>
+        <button class="block mobile-btn" type="button" data-modal-toggle="authentication-modal">
+          <i class="uil uil-schedule"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Appointment -->
+    <button class="hidden lg:block fixed bottom-5 right-5 animate-bounce appointment" type="button" data-modal-toggle="authentication-modal">
+      <i class="uil uil-schedule"></i>
+    </button>
+
+    <!-- Modal -->
+    <div id="authentication-modal" tabindex="-1" aria-hidden="true" class="sm:mt-[40px] md:mt-[5px] hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
+      <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
+            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+          <div class="py-6 px-6 lg:px-8">
+            <h3 class="mb-4 text-xl font-quicksand font-medium text-gray-900 dark:text-white"><i class="uil uil-schedule"></i> Request an Appointment</h3>
+            <form class="space-y-6" action="#">
+              <div>
+                <label for="email" class="block mb-2 text-sm font-quicksand font-black text-gray-900 dark:text-gray-300">Your email</label>
+                <input type="email" name="email" id="email" class="font-quicksand bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@mail.com" required="">
+              </div>
+              <div>
+                <label for="password" class="block mb-2 text-sm font-quicksand font-black text-gray-900 dark:text-gray-300">Your password</label>
+                <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="">
+              </div>
+              <div class="flex justify-between">
+                <div class="flex items-start">
+                  <div class="flex items-center h-5">
+                    <input id="remember" type="checkbox" value="" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
+                  </div>
+                  <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                </div>
+                <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
+              </div>
+              <button type="submit" class="w-full text-white appointment-btn font-medium rounded-lg text-sm px-5 py-2.5 text-center">Go to the Appointment Page</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- Hero -->
+    <div class="h-screen flex flex-col justify-center bg-[url('./materials/polygon.jpg')] bg-cover mb-20" id="home">
+      <div class="flex flex-col justify-center items-center text-center hero-content">
+        <h2 class="m-0 text-[110px] font-black italic bg-clip-text font-montserrat" data-tilt data-tilt-scale="1.1">AirCon</h2>
+        <p class="m-0 text-xl italic font-quicksand -mt-[30px]">One stop for all your AC requirements</p>
+      </div>
+      <p class="hidden lg:block absolute bottom-[210px] -right-11 -rotate-90 font-montserrat font-black text-md"><i class="uim uim-arrow-circle-left"></i> Make an Appointment !</p>
+    </div>
+
+    <!-- Decor -->
+    <div class="w-full -mt-64">
+      <img src="./materials/polygon3.png" class="w-full" alt="polygon2">
+    </div>
+    
+    <!-- About -->
+    <div class="mb-20" id="about">
+      <div class="flex justify-center flex-col lg:flex-row px-16 gap-5">
+        <div class=" rounded-xl flex w-full">
+          <img src="./materials/about.png" class=" rounded-xl h-[250px] w-full md:h-[300px] lg:h-[360px] xl:h-[340px]" alt="ac">
+        </div>
+        <div class="flex flex-col w-full">
+          <div class="flex items-center gap-1 font-orbitron">
+            About
+            <img src="./materials/octagon.png" class="h-10 w-10" alt="AirCon">
+            AirCon
+          </div>
+          <div class="flex flex-col gap-3">
+            <h1 class="font-play text-4xl">Air Conditioner Reparation & Installation Company</h1>
+            <p class="font-play">
+             <b class="font-orbitron">Aircon</b> is an Indonesian AC service corporation whose history began on December 24, 2010, Formed by <a href="https://www.linkedin.com/in/muhammad-rifqy-12145a226/" class="italic underline hover:text-[#333333]" target="_blank">Muhammad Rifqy</a>. 
+              Our company work of any level of complexity. Our team consists of highly qualified professionals, who have been in the industry for no less than 6 years. We have gained extensive experience while solving the most complex technical.
+              <b class="font-orbitron">Aircon</b> now, has become the biggest AC service company in the world. which is also one of the most valuable companies in the world.
+            </p>
+            <div class="flex flex-row gap-4">
+              <div class="flex">
+                <p class="font-meaCulpa text-[40px] items-center" data-tilt data-tilt-scale="1.1">MR</p>
+              </div>
+              <div class="flex flex-col">
+                <h4 class="font-orbitron text-xl">Muhammad Rifqy</h4>
+                <p class="font-play">CEO & Founder of AirCon</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="p-10">
+      <div class=" text-center mb-8">
+        <h1 class="text-[25px] md:text-4xl font-orbitron mb-3 no-span">Our Company Timeline</h1>
+        <p class="font-play text-lg">History & Milestones</p>
+      </div>
+      <div class="flex justify-center items-center px-16">
+        <img src="./materials/timeline-nobg.png" class="h-52 w-full object-fill" alt="timeline">
+      </div>
+    </div>
+    
+    <!-- Why Choose Us -->
+    <div class="p-20 flex flex-col">
+      <div class=" text-center mb-8">
+        <h1 class="text-[25px] md:text-4xl font-orbitron mb-3 no-span">Why Choose us</h1>
+        <p class="font-play text-lg">We are Trusted Source of Air Conditioner Maintenance Repairs Company</p>
+      </div>
+      <div class="mb-12">
+        <p class="font-quicksand xs:text-justify lg:text-center">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit odio sit dolorum ullam alias iure similique unde, 
+          tempora cupiditate distinctio in tempore voluptatum libero dicta dolor assumenda magni? Rem minima soluta a voluptatem 
+          cupiditate ipsam itaque culpa esse velit quas illum, quo magni voluptate nisi possimus veritatis magnam iure 
+          corporis laboriosam, in quasi impedit. Molestias nemo provident tempore fuga nobis laboriosam sed voluptas fugiat 
+          dolorem nihil adipisci numquam, dolore iusto totam vitae dignissimos veritatis ea explicabo ipsa id facere delectus ipsum 
+          maxime et? Ex rerum ullam magnam veniam cumque beatae obcaecati reprehenderit qui. Nobis corporis accusamus aut sapiente, 
+          quidem recusandae!
+        </p>
+      </div>
+      <div class="choose-item flex flex-col lg:flex-row justify-evenly">
+        <div class="flex justify-center items-center mt-5" data-tilt data-tilt-scale="1.1">
+          <div class="choose-content flex justify-center items-center text-center py-[15px] px-[20px] rounded-[10px]">
+            <p class="choose-icon rounded-full py-[15px] px-[20px] mr-[15px] text-[40px]">🏆</p>
+            <p class="font-quicksand font-black text-lg">Experienced<br>Technicians</p>
+          </div>
+        </div>
+        <div class="choose-item flex justify-center items-center mt-5" data-tilt data-tilt-scale="1.1">
+          <div class="choose-content flex justify-center items-center text-center py-[15px] px-[20px] rounded-[10px]">
+            <p class="choose-icon rounded-full py-[15px] px-[20px] mr-[15px] text-[40px]">🎧</p>
+            <p class="font-quicksand font-black text-lg">Free<br>Consultation</p>
+          </div>
+        </div>
+        <div class="choose-item flex justify-center items-center  mt-5" data-tilt data-tilt-scale="1.1">
+          <div class="choose-content flex justify-center items-center text-center py-[15px] px-[20px] rounded-[10px]">
+            <p class="choose-icon rounded-full py-[15px] px-[20px] mr-[15px] text-[40px]">💰</p>
+            <p class="font-quicksand font-black text-lg">Saving Your<br>Money</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decor -->
+    <div class="w-full -mt-32">
+      <img src="./materials/polygon3.png" class="w-full" alt="polygon2">
+    </div>
+
+    <div class="flex flex-col justify-center items-center">
+      <i class="font-quicksand text-center text-4xl mb-2" data-tilt data-tilt-scale="1.1">" Just a Weirdo That You Eventually Meet "</i>
+      <p class="font-quicksand text-xl">- MR</p>
+    </div>
+
+    <!-- Decor -->
+    <div class="w-full -mt-[8px]">
+      <img src="./materials/polygon2.png" class="w-full" alt="polygon2">
+    </div>
+
+    <!-- Service -->
+    <div id="service">
+      <div class="flex flex-col justify-center text-center items-center pt-[60px] pb-[20px]">
+        <p class="text-black font-orbitron text-[20px]">Our Services</p>
+        <h1 class="text-black font-play text-[45px]">What We Can Offer You</h1>
+        <p class="text-black font-play">We Provide Fast, Reliable Air Conditioning Services in Jakarta and It's Sourrounding Areas.</p>
+      </div>
+      <div class="bg-[url('./materials/polygon3.png')] bg-cover flex flex-col lg:flex-row justify-center items-center gap-10 mt-16">
+        <div class="kartu rounded-[10px] p-3">
+          <div class="parallax bg-[url('./materials/card2.png')] p-4 w-full max-w-sm sm:p-8 rounded-[10px]" data-tilt>
+            <h5 class="gold-title parallax-inner mb-4 text-3xl text-center font-quicksand font-black">Gold</h5>
+            <div class="parallax-inner flex items-baseline justify-center text-gray-900 dark:text-white">
+              <span class="parallax-inner text-3xl font-semibold">$</span>
+              <span class="parallax-inner text-5xl font-extrabold tracking-tight">49</span>
+              <span class="parallax-inner ml-1 text-xl font-quicksand text-[#262626]">/Month</span>
+            </div>
+            <ul role="list" class="parallax-inner my-7 space-y-5 flex flex-col justify-center">
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+            </ul>
+            <button type="button" class="parallax kartu-btn font-quicksand font-black rounded-full text-sm px-5 py-2.5 w-full text-center">Get Started</button>
+          </div> 
+        </div>
+        <div class="kartu rounded-[10px] p-3">
+          <div class="parallax bg-[url('./materials/card1.png')] p-4 w-full max-w-sm sm:p-8 rounded-[10px]" data-tilt>
+            <h5 class="silver-title parallax-inner mb-4 text-3xl text-center font-quicksand font-black">Silver</h5>
+            <div class="parallax-inner flex items-baseline justify-center text-gray-900 dark:text-white">
+              <span class="parallax-inner text-3xl font-semibold">$</span>
+              <span class="parallax-inner text-5xl font-extrabold tracking-tight">149</span>
+              <span class="parallax-inner ml-1 text-xl font-quicksand text-[#262626]">/Month</span>
+            </div>
+            <ul role="list" class="parallax-inner my-7 space-y-5 flex flex-col justify-center">
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+            </ul>
+            <button type="button" class="parallax kartu-btn font-quicksand font-black rounded-full text-sm px-5 py-2.5 w-full text-center">Get Started</button>
+          </div> 
+        </div>
+        <div class="kartu rounded-[10px] p-3">
+          <div class="parallax bg-[url('./materials/card3.png')] p-4 w-full max-w-sm sm:p-8 rounded-[10px]" data-tilt>
+            <h5 class="diamond-title parallax-inner mb-4 text-3xl text-center font-quicksand font-black">Diamond</h5>
+            <div class="parallax-inner flex items-baseline justify-center text-gray-900 dark:text-white">
+              <span class="parallax-inner text-3xl font-semibold">$</span>
+              <span class="parallax-inner text-5xl font-extrabold tracking-tight">199</span>
+              <span class="parallax-inner ml-1 text-xl font-quicksand text-[#262626]">/Month</span>
+            </div>
+            <ul role="list" class="parallax-inner my-7 space-y-5 flex flex-col justify-center">
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+              <li class="flex space-x-3">
+                <div class="tes rounded-full parallax-inner">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="parallax-inner text-base font-quicksand leading-tight text-[#262626]">Lorem, ipsum dolor.</span>
+              </li>
+            </ul>
+            <button type="button" class="parallax kartu-btn font-quicksand font-black rounded-full text-sm px-5 py-2.5 w-full text-center">Get Started</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial -->
+    <div class="h-screen testimonial bg-[url('./materials/polygon4.png')] bg-cover flex justify-center items-center p-20">
+      <img src="./materials/coming-soon.png" class="h-96 w-full" alt="bye">
+    </div>
+
+    <!-- Footer -->
+
+
+    <!-- <div>
+      <br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br />
+    </div> -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/1ab2d259fd.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript">
+    VanillaTilt.init(document.querySelector(".your-element"), {
+      max: 25,
+		  speed: 400
+    });
+    VanillaTilt.init(document.querySelectorAll(".your-element"));
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
